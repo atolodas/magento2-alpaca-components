@@ -1,8 +1,10 @@
 @mixin grid-column-width($width, $count) {
     @if ($grid-gutter > 0) {
         flex-basis: calc(#{100% / $count * $width} - #{($count - $width) * $grid-gutter / $count});
+        max-width: calc(#{100% / $count * $width} - #{($count - $width) * $grid-gutter / $count});
     }
     @else {
         flex-basis: 100% / $count * $width;
+        max-width: 100% / $count * $width;
     }
 }
