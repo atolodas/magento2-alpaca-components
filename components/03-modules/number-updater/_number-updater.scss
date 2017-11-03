@@ -40,9 +40,11 @@ $number-updater__input-offset-vertical: $number-updater__button-width + $number-
         box-shadow: none;
         border: 1px solid $gray;
         line-height: 22px;
-        padding: $spacer;
-        padding-left: $number-updater__input-offset-vertical;
+        padding: $spacer $number-updater__input-offset-vertical;
         text-align: center;
+        &:focus {
+            border-color: $green;
+        }
     }
 
 }
