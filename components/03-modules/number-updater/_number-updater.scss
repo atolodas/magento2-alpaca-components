@@ -1,0 +1,48 @@
+$number-updater__icon-width: 14px !default;
+$number-updater__icon-height: 14px !default;
+$number-updater__button-width: 24px !default;
+$number-updater__button-height: 24px !default;
+$number-updater__button-bg-color: $white !default;
+$number-updater__button-offset-horizontal: $spacer !default;
+$number-updater__button-offset-vertical: $spacer !default;
+$number-updater__input-offset-vertical: $number-updater__button-width + $number-updater__button-offset-horizontal !default;
+.number-updater {
+    position: relative;
+
+    &__icon {
+        width: $number-updater__icon-width;
+        height: $number-updater__icon-height;
+    }
+
+    &__button {
+        width: $number-updater__button-width;
+        height: $number-updater__button-height;
+        background-color: $number-updater__button-bg-color;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: $number-updater__button-offset-vertical;
+        &:hover {
+            cursor: pointer;
+        }
+        &--increment {
+            right: $number-updater__button-offset-horizontal;
+        }
+        &--decrement {
+            left: $number-updater__button-offset-horizontal;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 32px;
+        box-shadow: none;
+        border: 1px solid $gray;
+        line-height: 22px;
+        padding: $spacer;
+        padding-left: $number-updater__input-offset-vertical;
+        text-align: center;
+    }
+
+}

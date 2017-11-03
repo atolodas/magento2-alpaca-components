@@ -21,6 +21,7 @@ module.exports = {
       'linkedin',
       'loader',
       'plus',
+      'minus',
       'remove',
       'twitter'
     ]

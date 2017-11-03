@@ -1,0 +1,54 @@
+<div class="number-updater {{ class }}" {{{ attributes }}}>
+    <div class='
+             number-updater__button
+             number-updater__button--decrement
+             {{ decrementClass }}
+         '
+    >
+         <svg class="number-updater__icon">
+            <use xlink:href="{{ svg 'minus' }}"></use>
+        </svg>
+    </div>
+    {{> '@input' input }}
+    <div class='
+             number-updater__button
+             number-updater__button--increment
+             {{ incrementClass }}
+         '
+    >
+        <svg class="number-updater__icon">
+            <use xlink:href="{{ svg 'plus' }}"></use>
+        </svg>
+    </div>
+</div>
+
+
+<div class="number-updater {{ class }}" {{{ attributes }}}>
+    <div class='
+             number-updater__button
+             number-updater__button--decrement
+             {{ decrementClass }}
+         '
+    >
+         <svg class="number-updater__icon">
+            <use xlink:href="{{ svg 'minus' }}"></use>
+        </svg>
+    </div>
+    <div class='number-updater__counter'>
+        <input class='number-updater__input'
+               maxlength='{{ maxLength }}'
+               type='text'
+               value='{{ defaultValue }}'
+       >
+  </div>
+  <div class='
+           number-updater__button
+           number-updater__button--increment
+           {{ incrementClass }}
+      '
+  >
+      <svg class="number-updater__icon">
+          <use xlink:href="{{ svg 'plus' }}"></use>
+      </svg>
+  </div>
+</div>
