@@ -9,7 +9,9 @@
             <use xlink:href="{{ svg 'minus' }}"></use>
         </svg>
     </div>
-    {{> '@input' input }}
+    <div class='number-updater__counter'>
+        {{render '@input' input }}
+    </div>
     <div class='
              number-updater__button
              number-updater__button--increment
@@ -39,6 +41,8 @@
                maxlength='{{ maxLength }}'
                type='text'
                value='{{ defaultValue }}'
+               data-min='{{ minValue }}'
+               data-max='{{ maxValue }}'
        >
   </div>
   <div class='
@@ -52,3 +56,4 @@
       </svg>
   </div>
 </div>
+<script src="{{ static 'number-updater.js' }}"></script>
